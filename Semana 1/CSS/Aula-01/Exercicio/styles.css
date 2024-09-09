@@ -1,0 +1,19 @@
+.container{
+    border: 1px solid black;
+    padding: 15px;
+}
+
+.titulo{
+    font-weight: 400;
+    padding: 5px 0px 5px 5px;
+    background-color: aliceblue;
+}
+
+.descricao{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.link{
+    color: blue;
+}

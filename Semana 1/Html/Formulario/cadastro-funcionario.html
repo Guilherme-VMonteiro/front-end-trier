@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+<body>
+    <h2>Cadastrar cliente</h2>
+    <hr>
+    <form action="">
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" name="nome">
+        </div>
+        <br>
+        <div>
+            <label for="email">E-mail</label>
+            <input type="text" name="email">
+        </div>
+        <br>
+        <div>
+            <label for="idade">Idade</label>
+            <input type="number" name="idade">
+        </div>
+        <br>
+        <div>
+            <label for="sexo">Sexo</label>
+            <br>
+            <label for="sexo">Masculino</label>
+            <input type="radio" name="idade">
+            <label for="sexo">Feminino</label>
+            <input type="radio" name="idade">
+        </div>
+        <br>
+        <div>
+            <label for="profissao">Profissão</label>
+            <br>
+            <select name="profissao" id="">
+                <option value="programador">Programador</option>
+                <option value="analista">Analista</option>
+                <option value="designer">Designer</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="politicas">Eu aceito as <a href="#">políticas de privacidade</a></label>
+            <input type="checkbox" name="politicas">
+        </div>
+        <br>
+        <div>
+            <label for="observacao">Observação</label>
+            <textarea name="observacao" rows="4" cols="40"></textarea>
+        </div>
+        <br>
+        <br>
+        <div>
+            <button type="submit">Cadastrar</button>
+        </div>
+    </form>
+    <hr>
+    <a href="./funcionarios.html">Voltar</a>
+</body>
+</html>
