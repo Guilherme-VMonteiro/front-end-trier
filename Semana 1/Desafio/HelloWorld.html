@@ -5,71 +5,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <h3>Minha primeira página HTML</h3>
-    <p>
-        <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.</strong> Voluptatibus sed, praesentium sint
-        ipsa dolorum optio facilis modi aperiam ad reiciendis esse aut quasi obcaecati quos labore dolorem ratione illum
-        quo?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, beatae velit possimus, aut veritatis ipsa
-        dolor voluptates pariatur dicta, repellat dolore ut sed et soluta odit deleniti architecto. Omnis, ex?
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Aliquam</strong> sequi error harum, cumque iure
-        perspiciatis et deserunt ab temporibus vitae ducimus rem cum magnam nemo quidem eos itaque quam. Est.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi perferendis, aperiam perspiciatis veniam itaque
-        rerum aspernatur eaque, nihil, laborum <strong>voluptate</strong> iusto incidunt. Vitae, sunt facilis autem
-        suscipit molestias porro fuga.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Quasi quia odit</strong> voluptate aliquid,
-        iste et necessitatibus hic! Rem, exercitationem aliquam qui laboriosam est incidunt culpa expedita. At libero
-        quod a!
-        Lorem ipsum dolor sit amet <strong>consectetur</strong> adipisicing elit. Obcaecati ducimus a ipsum officiis
-        perferendis ad expedita alias distinctio, veniam, dignissimos aperiam et rerum voluptas nostrum consequuntur.
-        Amet facilis aliquid in.
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptate illo ipsum tempora, quia
-        praesentium sed quaerat, impedit debitis voluptas error minima sunt at blanditiis rem porro eum
-        <strong>perspiciatis</strong> repudiandae.
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam necessitatibus ducimus
-        <strong>corrupti</strong> ipsum tempora dolore minus voluptatum? Quasi expedita corporis aperiam excepturi eos
-        fuga quibusdam quidem, odio sit accusamus adipisci?
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, est asperiores soluta culpa
-        <strong>laudantium</strong> iure illum dolorem ipsam ut nihil tenetur placeat provident accusamus nesciunt
-        optio, libero dolore quasi quo?
-    </p>
-    <br>
+    <header class="mb-3 p-3 border-bottom">
+        <h3 class="text-center">Minha primeira página HTML</h3>
+    </header>
+    <main class="d-flex">
+        <article class="w-50 p-3">
+            <p>
+                <strong>Lorem ipsum dolor sit amet consectetur adipisicing elit.</strong> Voluptatibus sed, praesentium
+                sint
+                ipsa dolorum optio facilis modi aperiam ad reiciendis esse aut quasi obcaecati quos labore dolorem
+                ratione illum
+                quo?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, beatae velit possimus, aut veritatis
+                ipsa
+                dolor voluptates pariatur dicta, repellat dolore ut sed et soluta odit deleniti architecto. Omnis, ex?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Aliquam</strong> sequi error harum,
+                cumque iure
+                perspiciatis et deserunt ab temporibus vitae ducimus rem cum magnam nemo quidem eos itaque quam. Est.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi perferendis, aperiam perspiciatis veniam
+                itaque
+                rerum aspernatur eaque, nihil, laborum <strong>voluptate</strong> iusto incidunt. Vitae, sunt facilis
+                autem
+                suscipit molestias porro fuga.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. <strong>Quasi quia odit</strong> voluptate
+                aliquid,
+                iste et necessitatibus hic! Rem, exercitationem aliquam qui laboriosam est incidunt culpa expedita. At
+                libero
+                quod a!
+                Lorem ipsum dolor sit amet <strong>consectetur</strong> adipisicing elit. Obcaecati ducimus a ipsum
+                officiis
+                perferendis ad expedita alias distinctio, veniam, dignissimos aperiam et rerum voluptas nostrum
+                consequuntur.
+                Amet facilis aliquid in.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptate illo ipsum tempora, quia
+                praesentium sed quaerat, impedit debitis voluptas error minima sunt at blanditiis rem porro eum
+                <strong>perspiciatis</strong> repudiandae.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam necessitatibus ducimus
+                <strong>corrupti</strong> ipsum tempora dolore minus voluptatum? Quasi expedita corporis aperiam
+            </p>
+        </article>
+        <aside class="w-50 d-flex flex-column justify-content-center align-items-center">
+            <img src="https://www.triersistemas.com.br/imagens/logo_topo.png" alt="">
+            <div class="mb-3">
+                <a href="https://www.triersistemas.com.br/">Trier Sistemas</a>
+            </div>
+            <form action="mailto:guilhermevmonteiro2512@gmail.com" class="p-2 border border-secondary rounded mb-3">
 
-    <a href="https://www.triersistemas.com.br/">Trier Sistemas</a>
-    <img src="https://www.triersistemas.com.br/imagens/logo_topo.png" alt="">
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Nome</span>
+                    <input type="text" class="form-control" placeholder="Nome" aria-label="Nome">
+                </div>
 
-    <br>
-    <br>
-    <form action="mailto:guilhermevmonteiro2512@gmail.com">
-        <div>
-            <label for="nome">Nome</label>
-            <input type="text" name="nome">
-        </div>
-        <br>
-        <div>
-            <label for="email">E-Mail</label>
-            <input type="email" name="email">
-        </div>
-        <br>
-        <div>
-            <label for="senha">Senha</label>
-            <input type="password" name="senha">
-        </div>
-        <br>
-        <div>
-            <label for="sexo">Masculino</label>
-            <input type="radio" name="sexo" value="masculino">
-            <label for="sexo">Feminino</label>
-            <input type="radio" name="sexo" value="feminino">
-        </div>
-        <br>
-        <div>
-            <button type="submit">Enviar</button>
-        </div>
-    </form>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">E-mail</span>
+                    <input type="text" class="form-control" placeholder="E-mail" aria-label="Email">
+                </div>
+
+                <div class="input-group mb-3">
+                    <span class="input-group-text">Senha</span>
+                    <input type="text" class="form-control" placeholder="Senha" aria-label="Senha">
+                </div>
+
+                <div class="input-group mb-3">
+                    <div class="input-group-text">
+                        <span class="form-label m-0">Sexo</span>
+                    </div>
+                    <div class="input-group-text">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexo" id="sexo1" checked>
+                            <label class="form-check-label" for="sexo1">
+                                Masculino
+                            </label>
+                        </div>
+                        <div class="form-check ms-2">
+                            <input class="form-check-input" type="radio" name="sexo" id="sexo2">
+                            <label class="form-check-label" for="sexo2">
+                                Feminino
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group justify-content-center">
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                </div>
+            </form>
+        </aside>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
