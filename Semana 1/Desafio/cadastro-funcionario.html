@@ -12,58 +12,65 @@
 
 <body>
     <header class="mb-3 p-3 border-bottom">
-        <h2 class="text-center">Cadastrar cliente</h2>
+        <h2 class="text-center">Cadastrar Funcionário</h2>
     </header>
     <div class="d-flex flex-column align-items-center">
         <form action="" class="w-50 p-2 border border-secondary rounded mb-3">
-            <div class="input-group mb-3">
-                <span class="input-group-text"><i class="bi bi-person"></i></span>
-                <input type="text" class="form-control" placeholder="Nome" name="nome">
-            </div>
-            <div class="input-group mb-3">
-                <span class="input-group-text"><i class="bi bi-envelope"></i></span>
-                <input type="email" class="form-control" placeholder="Email" name="email">
-            </div>
 
-            <div class="input-group mb-3">
-                <span class="input-group-text"><i class="bi bi-cake2"></i></span>
-                <input type="number" class="form-control" placeholder="0" name="idade">
-            </div>
-
-            <div class="input-group mb-3">
-                <span class="input-group-text"><i class="bi bi-key"></i></span>
-                <input type="password" class="form-control" placeholder="Senha" name="senha">
-            </div>
-
-            <div class="input-group mb-3">
-                <div class="input-group-text">
-                    <span class="form-label m-0"><i class="bi bi-gender-male"></i><i
-                            class="bi bi-gender-female"></i></span>
+            <div class="row">
+                <div class="col input-group mb-3">
+                    <label class="input-group-text"><i class="bi bi-person"></i></label>
+                    <input type="text" class="form-control" placeholder="Nome" name="nome">
                 </div>
-                <div class="input-group-text">
-                    <div class="form-check">
-                        <input class="form-check-input" type="radio" name="sexo" id="sexo1" checked>
-                        <label class="form-check-label" for="sexo1">
-                            Masculino
-                        </label>
-                    </div>
-                    <div class="form-check ms-2">
-                        <input class="form-check-input" type="radio" name="sexo" id="sexo2">
-                        <label class="form-check-label" for="sexo2">
-                            Feminino
-                        </label>
-                    </div>
+                <div class="col input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input type="email" class="form-control" placeholder="Email" name="email">
                 </div>
             </div>
 
-            <div class="input-group mb-3">
-                <span class="input-group-text"><i class="bi bi-briefcase"></i></span>
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Profissão</option>
-                    <option value="programador">Programador</option>
-                    <option value="designer">Designer</option>
-                    <option value="analista">Analista</option>
-                </select>
+            <div class="row">
+                <div class="col input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-cake2"></i></span>
+                    <input type="number" class="form-control" placeholder="0" name="idade">
+                </div>
+                
+                <div class="col input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-key"></i></span>
+                    <input type="password" class="form-control" placeholder="Senha" name="senha">
+                </div>
+    
+            </div>
+
+            <div class="row">
+                <div class="col input-group mb-3">
+                    <span class="input-group-text"><i class="bi bi-briefcase"></i></span>
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Profissão</option>
+                        <option value="programador">Programador</option>
+                        <option value="designer">Designer</option>
+                        <option value="analista">Analista</option>
+                    </select>
+                </div>
+                <div class="col input-group mb-3 ">
+                    <div class="input-group-text">
+                        <span class="form-label m-0"><i class="bi bi-gender-male"></i><i
+                                class="bi bi-gender-female"></i></span>
+                    </div>
+                    <div class="input-group-text">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="sexo" id="sexo1" checked>
+                            <label class="form-check-label" for="sexo1">
+                                Masculino
+                            </label>
+                        </div>
+                        <div class="form-check ms-2">
+                            <input class="form-check-input" type="radio" name="sexo" id="sexo2">
+                            <label class="form-check-label" for="sexo2">
+                                Feminino
+                            </label>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="input-group mb-3">
@@ -71,12 +78,14 @@
                 <textarea class="form-control" aria-label="observacao"></textarea>
             </div>
 
-            <div class="input-group mb-3">
-                <span class="input-group-text">Eu li e aceito as <a href="#" class="ms-1">políticas de privacidade</a>
-                </span>
-                <div class="input-group-text">
-                    <input class="form-check-input mt-0" type="checkbox" value=""
-                        aria-label="Checkbox for following text input">
+            <div class="row">
+                <div class="col input-group mb-3">
+                    <span class="col input-group-text">Eu li e aceito as <a href="#" class="ms-1">políticas de privacidade</a>
+                    </span>
+                    <div class="col-1 input-group-text">
+                        <input class="form-check-input mt-0" type="checkbox" value=""
+                            aria-label="Checkbox for following text input">
+                    </div>
                 </div>
             </div>
 

@@ -1,0 +1,33 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    height: 100%;
+}
+
+.grid-container {
+    height: 100%;
+    display: grid;
+
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-rows: auto-fill;
+}
+
+.div-1 {
+    background-color: aqua;
+}
+
+.div-2 {
+    background-color: red;
+}
+
+.div-3 {
+    background-color: brown;
+}
+
+.div-4 {
+    background-color: chartreuse;
+}
+
+.div-5 {
+    background-color: crimson;
+}

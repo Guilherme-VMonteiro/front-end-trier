@@ -1,0 +1,37 @@
+
+.flex-container {
+    border: 1px solid black;
+    
+    display: flex;
+    flex-direction: row;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: space-around;
+}
+
+div{
+    height: 50px;
+    width: 50px;
+}
+
+.div-1 {
+    background-color: aqua;
+}
+
+.div-2 {
+    background-color: red;
+}
+
+.div-3 {
+    background-color: brown;
+}
+
+.div-4 {
+    background-color: chartreuse;
+}
+
+.div-5 {
+    background-color: crimson;
+}
