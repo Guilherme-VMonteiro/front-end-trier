@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div id="divVazia"></div>
+    <!-- <div class="label-topo">Nome</div> -->
+    <label class="label-topo">Nome</label>
+    <form onsubmit="manipulando(event)">
+        <input type="text" id="nomeInput" placeholder="Nome" onkeyup="atualizaLabelInput()">
+        <label id="label-input"></label>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+
+</html>

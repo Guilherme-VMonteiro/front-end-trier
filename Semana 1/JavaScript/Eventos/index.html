@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <script src="script.js" defer></script>
+    <style>
+        .caixa {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <section class="container-flex d-flex justify-content-around">
+        <div class="caixa bg-body-secondary border m-2 rounded" onclick="alerta()">
+            onClick
+        </div>
+        <div class="caixa bg-body-secondary border m-2 rounded" ondblclick="alerta()">
+            onDblClick
+        </div>
+        <div class="caixa bg-body-secondary border m-2 rounded" onmouseover="alerta()">
+            onMouseOver
+        </div>
+        <div class="caixa bg-body-secondary border m-2 rounded" onmouseout="alerta()">
+            onMouseOut
+        </div>
+        <div class="caixa bg-body-secondary border m-2 rounded" onmousedown="alerta()">
+            onMouseDown
+        </div>
+        <div class="caixa bg-body-secondary border m-2 rounded" onmouseup="alerta()">
+            onMouseUp
+        </div>
+    </section>
+    <section class="row p-4">
+        <div class="col input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Key down</span>
+            <input type="text" class="form-control" onkeydown="alerta()">
+        </div>
+        <div class="col input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Key up</span>
+            <input type="text" class="form-control" onkeyup="alerta()">
+        </div>
+        <div class="col input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Key press</span>
+            <input type="text" class="form-control" onkeypress="alerta()">
+        </div>
+    </section>
+    <section class="container d-flex flex-column align-items-center justify-content-center">
+        <form onsubmit="coletaEnvio(event)" class="border rounded d-flex flex-column align-items-center w-50 p-4">
+            <input type="text" name="input1" placeholder="Key up" onkeyup="log()">
+            <input type="text" name="input2" placeholder="on Blur" onblur="log()">
+            
+            <button type="submit" class="btn border m-2">Enviar</button>
+        </form>
+    </section>
+
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
