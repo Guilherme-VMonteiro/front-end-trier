@@ -1,0 +1,58 @@
+header {
+  background-color: rgb(110, 110, 110);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: white;
+  height: fit-content;
+}
+
+.header-brand {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.logo {
+  margin: 0px 20px 0px 40px;
+  height: 90%;
+}
+
+.header-items {
+  width: 70%;
+  list-style: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: end;
+
+  padding-right: 20px;
+  gap: 20px;
+}
+
+.header-items li {
+  height: fit-content;
+}
+
+.header-items li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.header-items li a:hover {
+  font-weight: bold;
+}
+
+input {
+  height: fit-content;
+  padding: 5px;
+
+  border-radius: 5px;
+  border: 1px solid black;
+}

@@ -1,0 +1,12 @@
+<header>
+  <div class="header-brand">
+    <img src="../../../assets/Logo-Trier.png" class="logo">
+    <h1>{{ titulo }}</h1>
+  </div>
+  <ul class="header-items">
+    <li><a [href]="meuLink">Cadastro de Funcionários</a></li>
+    <li><a href="" (click)="meuMetodo()">Cadastro de Usuário</a></li>
+    <input type="text" placeholder="Busca.." [(ngModel)]="valorInput">
+    {{valorInput}}
+  </ul>
+</header>
