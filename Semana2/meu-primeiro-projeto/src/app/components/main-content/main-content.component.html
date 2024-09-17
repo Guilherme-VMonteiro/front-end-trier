@@ -1,3 +1,5 @@
 <main>
-  <h1>Main</h1>
+  <h3>{{valorDigitado}}</h3>
+  <app-formulario empresa="Trier Sistemas" (formularioEnviadoEvent)="coletaEvento($event)" [cliente]="clienteParaEditar"></app-formulario>
+  <app-listagem [clientes]="listaDeClientes" (deletarClienteEvent)="coletaDelecao($event)" (editarClienteEvent)="coletarEdicao($event)"></app-listagem>
 </main>

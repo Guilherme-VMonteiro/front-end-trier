@@ -1,5 +1,5 @@
 <main>
-  <app-header></app-header>
-  <app-main-content></app-main-content>
+  <app-header [empresa]="title" (enviarValorDigitadoEvent)="coletaValorDigitado($event)"></app-header>
+  <app-main-content [valorDigitado]="valorDigitado"></app-main-content>
 </main>
 <router-outlet />

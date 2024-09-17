@@ -49,10 +49,10 @@ h1 {
   font-weight: bold;
 }
 
-input {
-  height: fit-content;
+.header-items li input {
   padding: 5px;
+}
 
-  border-radius: 5px;
-  border: 1px solid black;
+.input-group button {
+  padding: 5px;
 }

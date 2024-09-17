@@ -1,0 +1,16 @@
+<form action="" (submit)="formularioEnviado()">
+  <h3>Cadastro {{empresa}}</h3>
+  <div class="input-group">
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" [(ngModel)]="nome">
+  </div>
+  <div class="input-group">
+    <label for="email">Email:</label>
+    <input type="email" name="email" [(ngModel)]="email">
+  </div>
+  <div class="input-group">
+    <label for="fone">Fone:</label>
+    <input type="text" name="fone" [(ngModel)]="fone">
+  </div>
+  <input type="submit" value="Enviar">
+</form>

@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MainContentComponent } from './components/main-content/main-content.component';
 import { FormsModule } from '@angular/forms';
+import { FormularioComponent } from './components/formulario/formulario.component';
+import { ListagemComponent } from './components/listagem/listagem.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MainContentComponent
+    MainContentComponent,
+    FormularioComponent,
+    ListagemComponent
   ],
   imports: [
     BrowserModule,

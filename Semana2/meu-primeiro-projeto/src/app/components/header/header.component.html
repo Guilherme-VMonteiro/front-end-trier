@@ -1,12 +1,14 @@
 <header>
   <div class="header-brand">
     <img src="../../../assets/Logo-Trier.png" class="logo">
-    <h1>{{ titulo }}</h1>
+    <h1>{{empresa}}</h1>
   </div>
   <ul class="header-items">
-    <li><a [href]="meuLink">Cadastro de Funcionários</a></li>
-    <li><a href="" (click)="meuMetodo()">Cadastro de Usuário</a></li>
-    <input type="text" placeholder="Busca.." [(ngModel)]="valorInput">
-    {{valorInput}}
+    <li><a href="">Cadastro de Funcionários</a></li>
+    <li><a href="">Cadastro de Usuário</a></li>
+    <li class="input-group">
+      <input type="text" name="valorDigitado" [(ngModel)]="valorDigitado" (blur)="enviarValorDigitado()">
+      <button (click)="enviarValorDigitado()">Pesquisar</button>
+    </li>
   </ul>
 </header>

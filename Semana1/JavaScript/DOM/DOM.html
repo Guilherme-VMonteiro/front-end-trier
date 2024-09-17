@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table class="ws-table-all notranslate">
+        <tbody>
+            <tr>
+                <th style="width:50%">Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>document.getElementById(<em>id</em>)</td>
+                <td>Find an element by element id</td>
+            </tr>
+            <tr>
+                <td>document.getElementsByTagName(<em>name</em>)</td>
+                <td>Find elements by tag name</td>
+            </tr>
+            <tr>
+                <td>document.getElementsByClassName(<em>name</em>)</td>
+                <td>Find elements by class name</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table class="ws-table-all notranslate">
+        <tbody>
+            <tr>
+                <th style="width:50%">Property</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><em>element</em>.innerHTML =&nbsp; <em>new html content</em></td>
+                <td>Change the inner HTML of an element</td>
+            </tr>
+            <tr>
+                <td><em>element</em>.<em>attribute = new value</em></td>
+                <td>Change the attribute value of an HTML element</td>
+            </tr>
+            <tr>
+                <td><em>element</em>.style.<em>property = new style</em></td>
+                <td>Change the style of an HTML element</td>
+            </tr>
+            <tr>
+                <th style="width:50%">Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><em>element</em>.setAttribute<em>(attribute, value)</em></td>
+                <td>Change the attribute value of an HTML element</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table class="ws-table-all notranslate">
+        <tbody>
+            <tr>
+                <th style="width:50%">Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>document.createElement(<em>element</em>)</td>
+                <td>Create an HTML element</td>
+            </tr>
+            <tr>
+                <td>document.removeChild(<em>element</em>)</td>
+                <td>Remove an HTML element</td>
+            </tr>
+            <tr>
+                <td>document.appendChild(<em>element</em>)</td>
+                <td>Add an HTML element</td>
+            </tr>
+            <tr>
+                <td>document.replaceChild(<em>new, old</em>)</td>
+                <td>Replace an HTML element</td>
+            </tr>
+            <tr>
+                <td>document.write(<em>text</em>)</td>
+                <td>Write into the HTML output stream</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <table class="ws-table-all notranslate">
+        <tbody>
+            <tr>
+                <th style="width:50%">Method</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>document.getElementById(<em>id</em>).onclick = function(){<em>code</em>}</td>
+                <td>Adding event handler code to an onclick event</td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <h2>Validacao de Forms</h2>
+    <pre>
+        function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+              alert("Name must be filled out");
+              return false;
+            }
+          }
+    </pre>
+</body>
+
+</html>

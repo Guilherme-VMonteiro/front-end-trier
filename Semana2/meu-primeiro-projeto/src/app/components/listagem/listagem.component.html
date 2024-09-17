@@ -1,0 +1,18 @@
+<div class="lista-container">
+  <div class="cabecalho">
+    <span>Id</span>
+    <span>Nome</span>
+    <span>Email</span>
+    <span>Telefone</span>
+    <span>Deletar</span>
+  </div>
+  <div class="listagem">
+    <div *ngFor="let cliente of clientes" class="item-lista" (click)="editarCliente(cliente)">
+      <span>{{cliente.id}}</span>
+      <span>{{cliente.nome}}</span>
+      <span>{{cliente.email}}</span>
+      <span>{{cliente.telefone}}</span>
+      <span><Button (click)="deletarCliente(cliente.id)">Deletar</Button></span>
+    </div>
+  </div>
+</div>

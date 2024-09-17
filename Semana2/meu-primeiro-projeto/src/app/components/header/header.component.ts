@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -6,11 +6,12 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  titulo: String = "Trier Sistemas"
-  meuLink: String = "https://www.google.com/"
-  valorInput: String = ""
+  valorDigitado: String = ""
 
-  meuMetodo() {
-    alert("Event Binding")
+  @Input() empresa?: String
+  @Output() enviarValorDigitadoEvent = new EventEmitter<String>();
+
+  enviarValorDigitado() {
+    this.enviarValorDigitadoEvent.emit(this.valorDigitado)
   }
 }
