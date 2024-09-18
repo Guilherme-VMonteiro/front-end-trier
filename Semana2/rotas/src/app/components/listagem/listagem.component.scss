@@ -1,0 +1,45 @@
+.listagem-container{
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tabela{
+  height: 80%;
+  background-color: bisque;
+
+  display: grid;
+  grid-template-rows: 50px 1fr;
+
+  border: 1px solid black;
+}
+
+.cabecalho{
+  background-color: red;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+
+  border-bottom: 1px solid black;
+}
+
+.linha-tabela{
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  align-items: center;
+  padding: 10px 0px 10px 0px;
+
+  border-bottom: 1px solid black;
+}
+
+.linha-tabela:hover{
+  background-color: aquamarine;
+}
+
+.linha-tabela td{
+  text-align: center;
+}

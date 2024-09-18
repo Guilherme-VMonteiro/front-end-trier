@@ -1,0 +1,44 @@
+header {
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+
+  padding: 0px 30px 0px 30px;
+
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+
+  border-bottom: 1px solid black;
+}
+
+header h1 a{
+  color: black;
+  text-decoration: none;
+}
+
+header ul {
+  list-style: none;
+
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
+
+header ul li a{
+  font-size: 1.1rem;
+  color: black;
+  text-decoration: none;
+}
+
+header ul li a:hover{
+  font-weight: bold;
+}
+
+.ativo{
+  text-decoration: underline !important;
+}
+
+.brand{
+  color: rgb(92, 214, 92);
+}
