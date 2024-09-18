@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Trier Sistemas';
-  valorDigitado?:String;
-
-  coletaValorDigitado(valor: String){
-    this.valorDigitado = "Valor digitado: " + valor
-  }
 }

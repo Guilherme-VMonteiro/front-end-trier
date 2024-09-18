@@ -4,11 +4,7 @@
     <h1>{{empresa}}</h1>
   </div>
   <ul class="header-items">
-    <li><a href="">Cadastro de Funcionários</a></li>
-    <li><a href="">Cadastro de Usuário</a></li>
-    <li class="input-group">
-      <input type="text" name="valorDigitado" [(ngModel)]="valorDigitado" (blur)="enviarValorDigitado()">
-      <button (click)="enviarValorDigitado()">Pesquisar</button>
-    </li>
+    <li><a routerLink="formulario" routerLinkActive="active">Cadastro de Funcionários</a></li>
+    <li><a routerLink="listagem" routerLinkActive="active">Listagem</a></li>
   </ul>
 </header>

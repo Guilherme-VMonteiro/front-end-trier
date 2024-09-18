@@ -8,6 +8,7 @@ import { MainContentComponent } from './components/main-content/main-content.com
 import { FormsModule } from '@angular/forms';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { ListagemComponent } from './components/listagem/listagem.component';
+import { CadastroComponent } from './pages/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ListagemComponent } from './components/listagem/listagem.component';
     HeaderComponent,
     MainContentComponent,
     FormularioComponent,
-    ListagemComponent
+    ListagemComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,

@@ -1,12 +1,12 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { Cliente } from '../../models/cliente';
 
 @Component({
-  selector: 'app-main-content',
-  templateUrl: './main-content.component.html',
-  styleUrl: './main-content.component.scss'
+  selector: 'app-cadastro',
+  templateUrl: './cadastro.component.html',
+  styleUrl: './cadastro.component.scss'
 })
-export class MainContentComponent{
+export class CadastroComponent {
   clienteParaEditar?: Cliente
 
   counter: number = 0

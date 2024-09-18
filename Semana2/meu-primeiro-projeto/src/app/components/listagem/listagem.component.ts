@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Cliente } from '../../models/cliente';
 
 @Component({
   selector: 'app-listagem',
@@ -6,31 +7,16 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './listagem.component.scss'
 })
 export class ListagemComponent {
-  @Input() clientes?: Array<{
-    id: number;
-    nome: string;
-    email: string;
-    telefone: string;
-  }>
+  @Input() clientes?: Array<Cliente>
 
   @Output() deletarClienteEvent = new EventEmitter<Number>();
-  @Output() editarClienteEvent = new EventEmitter<{
-    id: number;
-    nome: string;
-    email: string;
-    telefone: string;
-  }>()
+  @Output() editarClienteEvent = new EventEmitter<Cliente>()
 
   deletarCliente(id: Number) {
     this.deletarClienteEvent.emit(id)
   }
 
-  editarCliente(cliente: {
-    id: number;
-    nome: string;
-    email: string;
-    telefone: string;
-  }) {
+  editarCliente(cliente: Cliente) {
     this.editarClienteEvent.emit(cliente)
   }
 }

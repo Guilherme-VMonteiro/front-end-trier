@@ -6,12 +6,5 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-  valorDigitado: String = ""
-
   @Input() empresa?: String
-  @Output() enviarValorDigitadoEvent = new EventEmitter<String>();
-
-  enviarValorDigitado() {
-    this.enviarValorDigitadoEvent.emit(this.valorDigitado)
-  }
 }

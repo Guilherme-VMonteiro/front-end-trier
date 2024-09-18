@@ -1,4 +1,14 @@
 main{
   display: grid;
-  grid-template-rows: 70px 1fr;
+  grid-template-rows: 70px 0px 1fr;
+  align-items: center;
 }
+
+app-header{
+  height: fit-content;
+}
+
+router-outlet{
+  height: fit-content;
+}
+
