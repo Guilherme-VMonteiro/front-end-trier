@@ -10,7 +10,13 @@ const routes: Routes = [
   {
     path: "funcionario",
     children: [
-      { path: "cadastro", component: CadastroComponent },
+      {
+        path: "cadastro",
+        children: [
+          { path: "", component: CadastroComponent, pathMatch: "full" },
+          { path: ":id", component: CadastroComponent },
+        ]
+      },
       { path: "listagem", component: ListagemComponent },
     ]
   },

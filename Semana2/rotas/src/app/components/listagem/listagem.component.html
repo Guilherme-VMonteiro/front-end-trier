@@ -8,10 +8,12 @@
     </tr>
     <tbody class="tabela-corpo">
       <tr class="linha-tabela">
-        <td>1</td>
-        <td>Guilherme</td>
-        <td>guilhermevmonteiro2512gmail.com</td>
-        <td><button>Excluir</button></td>
+        <div class="linha-tabela-data" (click)="editar(1)">
+          <td>1</td>
+          <td>Guilherme</td>
+          <td>guilhermevmonteiro2512gmail.com</td>
+        </div>
+        <td><button (click)="excluirLinha(1)">Excluir</button></td>
       </tr>
     </tbody>
   </table>

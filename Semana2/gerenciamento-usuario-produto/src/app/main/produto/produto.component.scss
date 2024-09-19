@@ -1,0 +1,54 @@
+.main{
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-rows: 60px 1fr;
+}
+
+header{
+  width: 100%;
+  background-color: rgb(119, 119, 119);
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+}
+
+header h3{
+  border-right: 1px solid rgb(255, 255, 255);
+  padding-right: 10px;
+}
+
+header ul {
+  list-style: none;
+
+  display: flex;
+
+  gap: 20px;
+}
+
+header ul li a{
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+header ul li a:hover{
+  font-weight: bold;
+}
+
+.content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active{
+  font-weight: bold !important;
+  text-decoration: underline !important;
+}

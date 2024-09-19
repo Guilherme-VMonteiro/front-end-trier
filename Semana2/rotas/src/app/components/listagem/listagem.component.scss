@@ -1,4 +1,4 @@
-.listagem-container{
+.listagem-container {
   width: 100%;
   height: 100%;
 
@@ -7,7 +7,8 @@
   justify-content: center;
 }
 
-.tabela{
+.tabela {
+  width: 80%;
   height: 80%;
   background-color: bisque;
 
@@ -17,29 +18,51 @@
   border: 1px solid black;
 }
 
-.cabecalho{
-  background-color: red;
+.cabecalho {
+  background-color: rgb(189, 189, 189);
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
   align-items: center;
 
   border-bottom: 1px solid black;
 }
 
-.linha-tabela{
+.tabela-corpo {
+  width: 100%;
+}
+
+.linha-tabela {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr;
+  grid-template-columns: 5fr 1fr;
   align-items: center;
   padding: 10px 0px 10px 0px;
 
   border-bottom: 1px solid black;
 }
 
-.linha-tabela:hover{
-  background-color: aquamarine;
+.linha-tabela:hover {
+  background-color: rgb(197, 197, 197);
 }
 
-.linha-tabela td{
+.linha-tabela-data {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  align-items: center;
+}
+
+.linha-tabela td {
   text-align: center;
+}
+
+
+.linha-tabela td button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.linha-tabela td button:hover {
+  text-decoration: underline;
 }
