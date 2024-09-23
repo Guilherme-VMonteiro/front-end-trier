@@ -3,11 +3,11 @@
   height: 100%;
 
   display: grid;
+  grid-template-columns: 1fr;
   grid-template-rows: 60px 1fr;
 }
 
 header{
-  width: 100%;
   background-color: rgb(119, 119, 119);
 
   display: flex;
@@ -43,6 +43,7 @@ header ul li a:hover{
 }
 
 .content{
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,3 +53,5 @@ header ul li a:hover{
   font-weight: bold !important;
   text-decoration: underline !important;
 }
+
+

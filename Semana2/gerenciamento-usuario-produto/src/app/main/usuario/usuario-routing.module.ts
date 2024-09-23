@@ -15,7 +15,10 @@ const routes: Routes = [
       },
       {
         path: "cadastro",
-        component: CadastroComponent
+        children: [
+          { path: "", component: CadastroComponent},
+          { path: ":id", component: CadastroComponent}
+        ]
       }
     ]
 

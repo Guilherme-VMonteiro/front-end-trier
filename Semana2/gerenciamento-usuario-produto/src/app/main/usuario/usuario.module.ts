@@ -1,21 +1,21 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
+import { CadastroModule } from './features/cadastro/cadastro.module';
+import { ListagemModule } from './features/listagem/listagem.module';
 import { UsuarioRoutingModule } from './usuario-routing.module';
 import { UsuarioComponent } from './usuario.component';
-import { ListagemComponent } from './features/listagem/listagem.component';
-import { CadastroComponent } from './features/cadastro/cadastro.component';
 
 
 @NgModule({
   declarations: [
-    UsuarioComponent,
-    ListagemComponent,
-    CadastroComponent
+    UsuarioComponent
   ],
   imports: [
     CommonModule,
-    UsuarioRoutingModule
+    UsuarioRoutingModule,
+    CadastroModule,
+    ListagemModule
   ]
 })
 export class UsuarioModule { }

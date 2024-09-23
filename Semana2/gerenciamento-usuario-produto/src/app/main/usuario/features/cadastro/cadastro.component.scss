@@ -1,0 +1,80 @@
+:host {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  width: 50%;
+
+  border: 1px solid black;
+  border-radius: 20px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.submit-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao:hover {
+  background: #e4e4e4;
+  cursor: pointer;
+}
+
+.errorContainer {
+  height: 20px;
+  margin-top: 15px;
+}
+
+.errorContainer p {
+  text-align: center;
+  color: red;
+}
+
+input {
+  padding: 10px 20px 10px 20px;
+  font-size: 1rem;
+
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+@media (max-width: 400px) {
+
+  :host {
+    align-items: start;
+  }
+
+  form {
+    width: 100%;
+    border: none;
+  }
+
+
+  .form-section {
+    flex-direction: column;
+  }
+}

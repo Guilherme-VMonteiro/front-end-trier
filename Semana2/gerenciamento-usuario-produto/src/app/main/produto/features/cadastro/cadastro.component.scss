@@ -8,14 +8,16 @@
 }
 
 form {
-  width: 60%;
-  height: 70%;
+  width: 50%;
+  height: 50%;
 
   border: 1px solid black;
   border-radius: 20px;
 
+  padding-block: 20px;
+
   display: grid;
-  grid-template-rows: 2fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 .form-section {
@@ -35,6 +37,20 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.botao:hover{
+  background: #e4e4e4;
+  cursor: pointer;
+}
+
+.error-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: red;
 }
 
 input{
