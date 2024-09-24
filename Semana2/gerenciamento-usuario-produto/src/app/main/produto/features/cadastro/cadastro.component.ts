@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Produto } from '../../Model/produto';
 
 @Component({
   selector: 'app-cadastro',
@@ -8,6 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CadastroComponent implements OnInit{
   form!: FormGroup
+  produto?: Produto
 
   constructor(private formBuilder: FormBuilder){}
 

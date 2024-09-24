@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { User } from '../../model/user';
 import { UsuarioService } from '../../services/usuario.service';
@@ -38,14 +38,14 @@ export class CadastroComponent implements OnInit {
     })
   }
 
-  validacaoEmail(email: FormGroup) {
+  validacaoEmail(email: FormControl) {
     if (email.value?.indexOf("@") < 0) {
       return { emailInvalido: true }
     }
     return null
   }
 
-  validacaoNascimento(dataNascimento: FormGroup) {
+  validacaoNascimento(dataNascimento: FormControl) {
     if (dataNascimento.value == null || dataNascimento.value < Date.parse('04 Dec 1995 00:12:00 GMT')) {
       return { dataNascimentoInvalida: true }
     }

@@ -22,8 +22,22 @@ tr{
   border-bottom: 1px solid black;
 }
 
+tr:hover{
+  background-color: rgb(199, 199, 199);
+  cursor: pointer;
+}
+
 tr td{
   text-align: center;
+}
+
+tr td button {
+  border: 0px;
+  background-color: transparent;
+}
+
+tr td button svg{
+  cursor: pointer;
 }
 
 tr:nth-child(odd) {
@@ -33,15 +47,25 @@ tr:nth-child(odd) {
 .header{
   background-color: white !important;
   box-sizing: border-box;
-  padding-right: 20px;
 }
 
 tbody{
   height: 100%;
-  overflow-y: scroll;
 }
 
-.linha:hover{
-  background-color: rgb(199, 199, 199);
-  cursor: pointer;
+@media (max-width: 400px) {
+  .header{
+    font-size: 0.9rem;
+  }
+
+  tr{
+    grid-template-columns: 1fr 4fr 4fr 4fr 1fr;
+    border-bottom: 1px solid black;
+    padding: 0px 5px 0px 5px;
+    box-sizing: border-box;
+  }
+
+  tr td{
+    font-size: 0.8rem;
+  }
 }

@@ -1,4 +1,4 @@
-main{
+main {
   width: 100%;
   height: 100%;
 
@@ -7,24 +7,61 @@ main{
   grid-template-rows: 70px 1fr;
 
   grid-template-areas:
-  "header header"
-  "aside section"
+    "header header"
+    "aside section"
   ;
 }
 
-header{
+.sem-sidebar {
+  grid-template-columns: 300px 1fr;
+
+  grid-template-areas:
+    "header header"
+    "section section"
+  ;
+}
+
+header {
   grid-area: header;
   width: 100%;
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
   align-items: center;
-  justify-content: center;
+  justify-items: center;
 
   background-color: rgb(197, 197, 197);
   color: white;
+
+  padding-inline: 10px;
+  box-sizing: border-box;
 }
 
-aside{
+.menu-button {
+  cursor: pointer;
+}
+
+.people-icon {
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.people-icon p {
+  position: relative;
+  left: -8px;
+  top: -10px;
+
+  font-size: 0.8rem;
+
+  background-color: rgba(255, 0, 0, 0.459);
+  border-radius: 50%;
+  padding: 1px 5px;
+  margin: 5px;
+}
+
+aside {
   grid-area: aside;
   width: 300px;
   height: 100%;
@@ -43,48 +80,49 @@ aside ul {
   gap: 10px;
 }
 
-aside ul li a{
+aside ul li a {
   color: white;
   text-decoration: none;
   font-size: 1.2rem;
 }
 
-aside ul li a:hover{
+aside ul li a:hover {
   font-weight: bold;
 }
 
-section{
+section {
   grid-area: section;
 }
 
-.active{
+.active {
   text-decoration: underline !important;
   font-weight: bold !important;
 }
 
 @media (max-width: 400px) {
-  main{
+  main {
     grid-template-columns: 1fr;
-    grid-template-rows: 70px 70px 1fr;
+    grid-template-rows: 70px 50px 1fr;
 
     grid-template-areas:
-    "header"
-    "aside"
-    "section"
+      "header"
+      "aside"
+      "section"
     ;
   }
 
-  aside{
+  aside {
     width: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
-  aside ul{
+  aside ul {
     flex-direction: row;
   }
 
-  section{
+  section {
     width: 100vw;
   }
 }

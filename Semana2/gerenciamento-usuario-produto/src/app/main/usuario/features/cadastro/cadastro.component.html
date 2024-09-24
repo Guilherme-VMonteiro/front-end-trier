@@ -9,7 +9,7 @@
   <div class="form-section">
     <div class="input-group">
       <div class="errorContainer">
-        <p *ngIf="form.get('nome')?.hasError('required')">Erro: Nome inválido</p>
+        <p *ngIf="form.get('nome')?.touched && form.get('nome')?.hasError('required')">Erro: Nome inválido</p>
       </div>
       <label for="nome">Nome</label>
       <input type="text" name="nome" formControlName="nome">
@@ -17,7 +17,7 @@
 
     <div class="input-group">
       <div class="errorContainer">
-        <p *ngIf="form.get('email')?.hasError('emailInvalido')">Erro: Email inválido</p>
+        <p *ngIf="form.get('email')?.touched && form.get('email')?.hasError('emailInvalido')">Erro: Email inválido</p>
       </div>
       <label for="email">E-mail</label>
       <input type="email" name="email" formControlName="email">
@@ -27,7 +27,7 @@
   <div class="form-section">
     <div class="input-group">
       <div class="errorContainer">
-        <p *ngIf="form.get('dataNascimento')?.hasError('dataNascimentoInvalida')">Erro: Data de nascimento inválida</p>
+        <p *ngIf="form.get('dataNascimento')?.touched && form.get('dataNascimento')?.hasError('dataNascimentoInvalida')">Erro: Data de nascimento inválida</p>
       </div>
       <label for="dataNascimento">Data de Nascimento</label>
       <input type="date" name="dataNascimento" formControlName="dataNascimento">

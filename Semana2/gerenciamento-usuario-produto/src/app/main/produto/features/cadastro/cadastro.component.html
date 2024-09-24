@@ -1,5 +1,12 @@
 <form action="" [formGroup]="form">
 
+  <div class="form-section" *ngif="produto?.id">
+    <div class="input-group">
+      <label for="id">Id</label>
+      <input type="number" name="id" formControlName="id" [value]="produto?.id" [readOnly]="true">
+    </div>
+  </div>
+
   <div class="form-section">
     <div class="input-group">
       <label for="produto">Produto</label>
@@ -14,19 +21,20 @@
 
   <div class="form-section">
     <div class="input-group">
+      <div class="errorContainer">
+        <p *ngIf="form.get('estoque')?.touched && form.get('estoque')?.hasError('estoqueInvalido')">Erro: Estoque inválido</p>
+      </div>
       <label for="estoque">Estoque</label>
       <input type="number" name="estoque" formControlName="estoque">
     </div>
 
     <div class="input-group">
+      <div class="errorContainer">
+        <p *ngIf="form.get('preco')?.touched && form.get('preco')?.hasError('precoInvalido')">Erro: Preço inválido</p>
+      </div>
       <label for="preco">Preço</label>
       <input type="number" name="preco" formControlName="preco">
     </div>
-  </div>
-
-  <div class="error-container">
-    <p *ngIf="form.get('estoque')?.hasError('estoqueInvalido')">Erro: Estoque inválido</p>
-    <p *ngIf="form.get('preco')?.hasError('precoInvalido')">Erro: Preço inválido</p>
   </div>
 
   <div class="submit-container">

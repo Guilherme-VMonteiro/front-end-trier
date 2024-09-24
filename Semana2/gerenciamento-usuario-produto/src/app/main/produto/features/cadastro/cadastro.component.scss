@@ -60,3 +60,19 @@ input{
   border-radius: 10px;
   border: 1px solid black;
 }
+
+@media (max-width: 400px) {
+
+  :host {
+    align-items: start;
+  }
+
+  form {
+    width: 100%;
+    border: none;
+  }
+
+  .form-section {
+    flex-direction: column;
+  }
+}

@@ -7,12 +7,16 @@
     <th>Excluir</th>
   </tr>
   <tbody>
-    <tr class="linha" *ngFor="let user of userList" (click)="editUser(user.id!)">
+    <tr *ngFor="let user of userList" (click)="editUser(user.id!)">
       <td>{{user.id}}</td>
       <td>{{user.nome}}</td>
       <td>{{user.email}}</td>
       <td>{{user.dataNascimento | date}}</td>
-      <td><button (click)="removeUser(user.id!)">Excluir</button></td>
+      <td>
+        <button (click)="removeUser(user.id!)">
+          <img src="../../../../../assets/delete.svg" alt="">
+        </button>
+      </td>
     </tr>
   </tbody>
 </table>

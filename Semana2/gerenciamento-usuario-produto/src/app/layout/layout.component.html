@@ -1,8 +1,13 @@
-<main>
+<main [ngClass]="{'sem-sidebar': !sidebar}">
   <header>
+    <img (click)="toggleSideBar()" src="../../assets/menu.svg" class="menu-button">
     <h1>Trier Sistemas</h1>
+    <div class="people-icon" routerLink="usuario/listagem">
+      <img src="../../assets/people.svg">
+      <p>{{userQuantity}}</p>
+    </div>
   </header>
-  <aside>
+  <aside *ngIf="sidebar">
     <ul>
       <li><a routerLink="">Main</a></li>
       <li><a routerLink="produto" routerLinkActive="active">Produto</a></li>
