@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { LayoutModule } from './layout/layout.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FotoServiceService } from './core/services/foto-service.service';
+import { FeaturesModule } from './features/features.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,8 +16,9 @@ import { FotoServiceService } from './core/services/foto-service.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    LayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    FeaturesModule,
+    SharedModule
   ],
   providers: [
     FotoServiceService

@@ -1,20 +1,16 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { CardComponent } from './card/card.component';
 import { HttpClientModule } from '@angular/common/http';
-
-
+import { NgModule } from '@angular/core';
+import { AlbunsListComponent } from './albuns-list/albuns-list.component';
+import { AlbunsListModule } from './albuns-list/albuns-list.module';
 
 @NgModule({
   declarations: [
-    CardComponent
   ],
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    AlbunsListModule
   ],
-  exports: [
-    CardComponent
-  ]
 })
 export class CoreModule { }

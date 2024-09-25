@@ -1,0 +1,18 @@
+header{
+  height: 70px;
+
+  background-color: rgb(204, 204, 204);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main{
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: repeat(auto-fill, fit-content);
+  gap: 10px;
+}
