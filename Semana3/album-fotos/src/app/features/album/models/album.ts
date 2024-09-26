@@ -4,6 +4,6 @@ export interface Album {
   userId: number,
   id: number,
   title: string
-  img?: string
+  thumbnailUrl: string
   photos?: Array<Photo>
 }

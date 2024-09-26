@@ -10,6 +10,9 @@ import { ImageCardComponent } from './components/image-card/image-card.component
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ImageCardComponent
   ]
 })
 export class SharedModule { }

@@ -1,0 +1,6 @@
+<header>
+  <h2>Fotos do álbum: {{album.title}}</h2>
+</header>
+<section>
+  <app-image-card *ngFor="let photo of album.photos" [data]="photo"></app-image-card>
+</section>

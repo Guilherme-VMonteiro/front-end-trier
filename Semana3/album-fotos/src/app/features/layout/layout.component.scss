@@ -1,0 +1,17 @@
+header{
+  height: 70px;
+
+  background-color: rgb(204, 204, 204);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+header h1{
+  cursor: pointer;
+}
+
+main{
+  width: 100%;
+}

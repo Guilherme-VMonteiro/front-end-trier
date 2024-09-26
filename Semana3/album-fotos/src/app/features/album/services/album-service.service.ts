@@ -7,16 +7,19 @@ import { Photo } from '../models/photo';
 @Injectable({
   providedIn: 'root'
 })
-export class FotoServiceService {
+export class AlbumServiceService {
 
   constructor(private http: HttpClient) { }
 
-  getAlbuns(){
+  getAlbuns() {
     return this.http.get<Array<Album>>("https://jsonplaceholder.typicode.com/albums").pipe(take(1))
   }
 
+  getAlbumById(albumId: number) {
+    return this.http.get<Album>(`https://jsonplaceholder.typicode.com/albums/${albumId}`).pipe(take(1))
+  }
 
-  getFotos(){
-    return this.http.get<Array<Photo>>("https://jsonplaceholder.typicode.com/photos").pipe(take(1))
+  getFotosById(albumId: number) {
+    return this.http.get<Array<Photo>>(`https://jsonplaceholder.typicode.com/albums/${albumId}/photos`).pipe(take(1))
   }
 }

@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Album } from '../../../features/album/models/album';
+import { Photo } from '../../../features/album/models/photo';
 
 @Component({
   selector: 'app-image-card',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class ImageCardComponent {
 
+  @Input() data!: Album | Photo
 }

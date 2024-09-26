@@ -1,12 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LayoutModule } from './layout/layout.module';
-import { HttpClientModule } from '@angular/common/http';
-import { FotoServiceService } from './core/services/foto-service.service';
 import { FeaturesModule } from './features/features.module';
+import { LayoutModule } from './features/layout/layout.module';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
@@ -18,10 +17,8 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     HttpClientModule,
     FeaturesModule,
-    SharedModule
-  ],
-  providers: [
-    FotoServiceService
+    SharedModule,
+    LayoutModule
   ],
   bootstrap: [AppComponent]
 })

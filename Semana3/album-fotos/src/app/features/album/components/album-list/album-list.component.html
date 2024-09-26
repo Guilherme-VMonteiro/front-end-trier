@@ -1,1 +1,6 @@
-<p>album-list works!</p>
+<header>
+  <h2>Álbums</h2>
+</header>
+<section>
+  <app-image-card [routerLink]="'/' + album.id" *ngFor="let album of albuns" [data]="album"></app-image-card>
+</section>
