@@ -10,7 +10,15 @@ const routes: Routes = [
       {
         path: "mesa",
         loadChildren: () => import("../features/mesa/mesa.module").then((modulo) => modulo.MesaModule)
-      }
+      },
+      {
+        path: "restaurante",
+        loadChildren: () => import("../features/restaurante/restaurante.module").then((modulo) => modulo.RestauranteModule)
+      },
+      {
+        path: "funcionario",
+        loadChildren: () => import("../features/funcionario/funcionario.module").then((modulo) => modulo.FuncionarioModule)
+      },
     ]
   }
 ];

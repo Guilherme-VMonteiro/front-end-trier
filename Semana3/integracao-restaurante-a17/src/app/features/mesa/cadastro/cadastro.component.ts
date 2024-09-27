@@ -1,6 +1,8 @@
-import { Restaurante } from './../../restaurante/model/restaurante';
-import { Component, Input, OnInit } from '@angular/core';
-import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
+import { Mesa } from '../model/mesa';
+import { MesaService } from '../services/mesa.service';
 
 @Component({
   selector: 'app-cadastro',
@@ -8,14 +10,24 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from
   styleUrl: './cadastro.component.scss'
 })
 export class CadastroComponent implements OnInit {
-  @Input() titulo?: string = "Adicionar uma nova mesa"
-
+  titulo: string = "Adicionar uma nova mesa"
+  atualizar: boolean = false
   formulario!: FormGroup
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private activetedRoute: ActivatedRoute, private mesaService: MesaService) {}
 
   ngOnInit(): void {
     this.montarFormulario()
+
+    this.activetedRoute.params.subscribe(params => {
+      if(params['mesaId']){
+        this.mesaService.getMesaById(params['mesaId']).subscribe(mesa => {
+          this.formulario.patchValue(mesa)
+          this.atualizar = true
+          this.titulo = "Atualizar mesa"
+        })
+      }
+    })
   }
 
   montarFormulario() {
@@ -35,9 +47,12 @@ export class CadastroComponent implements OnInit {
   }
 
   cadastrar() {
-    console.log(this.formulario.getRawValue());
-    console.log(this.formulario.get('numero')?.hasError('valorInvalido'));
-    console.log(this.formulario.get('capacidadePessoas')?.hasError('valorInvalido'));
+    let rawValue: Mesa = this.formulario.getRawValue()
+    if(rawValue['id'] == undefined){
+      this.mesaService.createMesa(rawValue).subscribe()
+    }else{
+      this.mesaService.updateMesa(rawValue).subscribe()
+    }
   }
 }
 

@@ -1,0 +1,51 @@
+<div class="container">
+  <header>
+    <h2>Configurações</h2>
+  </header>
+  <form [formGroup]="formulario" (submit)="atualizarRestaurante()">
+
+    <div class="input-container">
+      <div class="input-group">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" formControlName="nome" placeholder="Nome"
+          [ngClass]="{'erro': formulario.get('nome')?.touched && (formulario.get('nome')?.hasError('required') || formulario.get('nome')?.hasError('valorInvalido'))}">
+      </div>
+
+      <div class="input-group">
+        <label for="cnpj">CNPJ</label>
+        <input type="text" name="cnpj" formControlName="cnpj" placeholder="CNPJ" [value]="formulario.get('cnpj')?.value | cnpj"
+          [ngClass]="{'erro': formulario.get('cnpj')?.touched && (formulario.get('cnpj')?.hasError('required') || formulario.get('cnpj')?.hasError('valorInvalido'))}">
+      </div>
+    </div>
+
+    <div class="input-container">
+      <div class="input-group">
+        <label for="estrelas">Estrelas</label>
+        <input type="number" name="estrelas" formControlName="estrelas" placeholder="Estrelas" max="3" min="0"
+          [ngClass]="{'erro': formulario.get('estrelas')?.touched && (formulario.get('estrelas')?.hasError('required') || formulario.get('estrelas')?.hasError('valorInvalido'))}">
+      </div>
+
+      <div class="input-group">
+        <label for="tipoComida">Tipo de comida</label>
+        <select name="tipoComida" formControlName="tipoComida"
+          [ngClass]="{'erro': formulario.get('tipoComida')?.touched && (formulario.get('tipoComida')?.hasError('required') || formulario.get('tipoComida')?.hasError('valorInvalido'))}">
+          <option value="" [defaultSelected]="true">Tipo de comida</option>
+          <option value="BRASILEIRA">BRASILEIRA</option>
+          <option value="ITALIANA">ITALIANA</option>
+          <option value="FRANCESA">FRANCESA</option>
+          <option value="MEXICANA">MEXICANA</option>
+          <option value="CHINESA">CHINESA</option>
+          <option value="JAPONESA">JAPONESA</option>
+          <option value="INDIANA">INDIANA</option>
+          <option value="MEDITERRANEA">MEDITERRANEA</option>
+          <option value="VEGANA">VEGANA</option>
+          <option value="VEGETARIANA">VEGETARIANA</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="submit-container">
+      <input type="submit" value="Atualizar" [disabled]="!formulario.valid">
+    </div>
+  </form>
+</div>

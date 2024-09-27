@@ -1,0 +1,95 @@
+<div class="container">
+  <header>
+    <h2>{{titulo}}</h2>
+  </header>
+  <form [formGroup]="formulario" (submit)="cadastrar()">
+
+    <div class="input-container">
+
+      <div class="input-group">
+        <label for="nome">Nome</label>
+        <input type="text" name="nome" formControlName="nome" placeholder="Nome"
+          [ngClass]="{'erro': formulario.get('nome')?.touched && (formulario.get('nome')?.hasError('required') || formulario.get('nome')?.hasError('nomeInvalido'))}">
+      </div>
+
+      <div class="input-group">
+        <label for="sobrenome">Sobrenome</label>
+        <input type="text" name="sobrenome" formControlName="sobrenome" placeholder="Sobrenome"
+          [ngClass]="{'erro': formulario.get('sobrenome')?.touched && (formulario.get('sobrenome')?.hasError('required') || formulario.get('sobrenome')?.hasError('nomeInvalido'))}">
+      </div>
+
+      <div class="input-group">
+        <label for="cpf">CPF</label>
+        <input type="text" name="cpf" formControlName="cpf" placeholder="CPF"
+          [ngClass]="{'erro': formulario.get('cpf')?.touched && (formulario.get('cpf')?.hasError('required') || formulario.get('cpf')?.hasError('cpfInvalido'))}">
+      </div>
+
+      <div class="input-group">
+        <label for="dataNascimento">Data de Nascimento</label>
+        <input type="date" name="dataNascimento" formControlName="dataNascimento" placeholder="Data de Nascimento"
+          [ngClass]="{'erro': formulario.get('dataNascimento')?.touched && (formulario.get('dataNascimento')?.hasError('required') || formulario.get('dataNascimento')?.hasError('dataDeNascimentoInvalida'))}">
+      </div>
+
+    </div>
+
+    <div class="input-container">
+
+      <div class="input-group">
+        <label for="sexo">Sexo</label>
+        <select name="sexo" formControlName="sexo"
+          [ngClass]="{'erro': formulario.get('sexo')?.touched && (formulario.get('sexo')?.hasError('required') || formulario.get('sexo')?.hasError('valorInvalido'))}">
+          <option [defaultSelected]="true">Sexo</option>
+          <option value="0">Masculino</option>
+          <option value="1">Feminino</option>
+          <option value="2">Indefinido</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="telefone">Telefone</label>
+        <input type="text" name="telefone" formControlName="telefone" placeholder="Telefone"
+          [ngClass]="{'erro': formulario.get('telefone')?.touched && (formulario.get('telefone')?.hasError('required') || formulario.get('telefone')?.hasError('valorInvalido'))}">
+      </div>
+
+      <div class="input-group">
+        <label for="cargo">Cargo</label>
+        <select name="cargo" formControlName="cargo"
+          [ngClass]="{'erro': formulario.get('cargo')?.touched && (formulario.get('cargo')?.hasError('required') || formulario.get('cargo')?.hasError('valorInvalido'))}">
+          <option [defaultSelected]="true">Cargo</option>
+          <option value="0">Dono</option>
+          <option value="1">Gerente</option>
+          <option value="2">Funcionário</option>
+          <option value="3">Freelance</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="dataAdmisao">Data Admisão</label>
+        <input type="date" name="dataAdmisao" formControlName="dataAdmisao" placeholder="Data Admisão"
+          [ngClass]="{'erro': formulario.get('dataAdmisao')?.touched && (formulario.get('dataAdmisao')?.hasError('required') || formulario.get('dataAdmisao')?.hasError('valorInvalido'))}">
+      </div>
+
+    </div>
+
+    <div class="input-container">
+
+      <div class="input-group">
+        <label for="salario">Salário</label>
+        <input type="number" name="salario" formControlName="salario" placeholder="Salário" min="0"
+          [ngClass]="{'erro': formulario.get('salario')?.touched && (formulario.get('salario')?.hasError('required') || formulario.get('salario')?.hasError('valorInvalido'))}">
+      </div>
+
+      <div class="input-group">
+        <label for="cargaHoraria">Carga Horária</label>
+        <input type="number" name="cargaHoraria" formControlName="cargaHoraria" placeholder="Carga Horária" min="0"
+          [ngClass]="{'erro': formulario.get('cargaHoraria')?.touched && (formulario.get('cargaHoraria')?.hasError('required') || formulario.get('cargaHoraria')?.hasError('valorInvalido'))}">
+      </div>
+
+    </div>
+
+    <div class="submit-container">
+      <input type="submit" value="Adicionar" *ngIf="!atualizar" [disabled]="!formulario.valid">
+      <input type="submit" value="Atualizar" *ngIf="atualizar" [disabled]="!formulario.valid">
+    </div>
+  </form>
+</div>

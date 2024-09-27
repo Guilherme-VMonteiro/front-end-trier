@@ -1,0 +1,48 @@
+<div class="modal" *ngIf="abrirModal" (click)="fecharModal()">
+  <div class="container">
+    <h1>Detalhes</h1>
+    <div class="infos-container">
+      <ul class="info-section">
+        <li>
+          <label>Nome</label>
+          <p>{{funcionario.nome + " " + funcionario.sobrenome}}</p>
+        </li>
+        <li>
+          <label>CPF</label>
+          <p>{{funcionario.cpf}}</p>
+        </li>
+        <li>
+          <label>Data de Nascimento</label>
+          <p>{{funcionario.dataNascimento | date:"dd/MM/YYYY"}}</p>
+        </li>
+        <li>
+          <label>Sexo</label>
+          <p>{{funcionario.sexo}}</p>
+        </li>
+        <li>
+          <label>Telefone</label>
+          <p>{{funcionario.telefone | telefone}}</p>
+        </li>
+      </ul>
+
+      <ul class="info-section">
+        <li>
+          <label>Cargo</label>
+          <p>{{funcionario.cargo}}</p>
+        </li>
+        <li>
+          <label>Data de Admisão</label>
+          <p>{{funcionario.dataAdmisao | date:"dd/MM/YYYY"}}</p>
+        </li>
+        <li>
+          <label>Salário</label>
+          <p>{{funcionario.salario | currency:"BRL"}}</p>
+        </li>
+        <li>
+          <label>Carga Horária</label>
+          <p>{{funcionario.cargaHoraria}}</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -18,6 +18,10 @@ table{
   flex-direction: column;
 }
 
+table>tr{
+  padding-right: 10px;
+}
+
 tbody{
   overflow-y: scroll;
 }
@@ -41,7 +45,7 @@ table tr{
   min-height: 50px;
 
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
 
   border-bottom: 1px solid $base-dark;
