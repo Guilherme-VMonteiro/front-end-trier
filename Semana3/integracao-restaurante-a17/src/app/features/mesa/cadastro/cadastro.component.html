@@ -1,0 +1,26 @@
+<div class="container" (submit)="cadastrar()">
+  <header>
+    <h2>{{titulo}}</h2>
+  </header>
+  <form [formGroup]="formulario">
+
+    <div class="input-container">
+      <div class="input-group">
+        <label for="numero">Número</label>
+        <input type="number" name="numero" formControlName="numero" placeholder="Número da mesa"
+          [ngClass]="{'erro': formulario.get('numero')?.touched && (formulario.get('numero')?.hasError('required') || formulario.get('numero')?.hasError('valorInvalido'))}">
+      </div>
+
+      <div class="input-group">
+        <label for="capacidadePessoas">Capacidade de pessoas</label>
+        <input type="number" name="capacidadePessoas" formControlName="capacidadePessoas"
+          placeholder="Capacidade de pessoas"
+          [ngClass]="{'erro': formulario.get('capacidadePessoas')?.touched && (formulario.get('capacidadePessoas')?.hasError('required') || formulario.get('capacidadePessoas')?.hasError('valorInvalido'))}">
+      </div>
+    </div>
+
+    <div class="submit-container">
+      <input type="submit" value="Adicionar" [disabled]="!formulario.valid">
+    </div>
+  </form>
+</div>
