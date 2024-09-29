@@ -1,4 +1,6 @@
 import { Restaurante } from "../../restaurante/model/restaurante";
+import { CargoEnum } from "./cargo";
+import { SexoEnum } from "./sexo";
 
 export interface Funcionario {
   id: number,
@@ -6,9 +8,9 @@ export interface Funcionario {
   sobrenome: string,
   cpf: string,
   dataNascimento: Date,
-  sexo: string,
+  sexo: SexoEnum,
   telefone: string,
-  cargo: string,
+  cargo: CargoEnum,
   dataAdmisao: Date,
   salario: number,
   cargaHoraria: number,

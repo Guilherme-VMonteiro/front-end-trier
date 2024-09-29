@@ -1,0 +1,19 @@
+<section>
+  <div class="nav">
+    <ul>
+      <li>
+        <app-sub-menu-button nomeBotao="Listagem" routerLink="/funcionario" routerLinkActive="selected">
+          <i class="fa-solid fa-list"></i>
+        </app-sub-menu-button>
+      </li>
+      <li>
+        <app-sub-menu-button nomeBotao="Adicionar" routerLink="cadastro">
+          <i class="fa-solid fa-plus"></i>
+        </app-sub-menu-button>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</section>

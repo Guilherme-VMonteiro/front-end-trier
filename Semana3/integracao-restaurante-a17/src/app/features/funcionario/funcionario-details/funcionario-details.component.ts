@@ -12,7 +12,6 @@ export class FuncionarioDetailsComponent implements OnChanges{
   @Output() fecharModalEvent = new EventEmitter();
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.funcionario);
   }
 
   fecharModal(){

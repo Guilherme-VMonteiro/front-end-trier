@@ -19,6 +19,10 @@ const routes: Routes = [
         path: "funcionario",
         loadChildren: () => import("../features/funcionario/funcionario.module").then((modulo) => modulo.FuncionarioModule)
       },
+      {
+        path: "cliente",
+        loadChildren: () => import("../features/cliente/cliente.module").then((modulo) => modulo.ClienteModule)
+      },
     ]
   }
 ];

@@ -14,9 +14,7 @@ export class FuncionarioListComponent {
   funcionarios!: Array<Funcionario>;
 
   constructor(private funcionarioService: FuncionarioService) {
-    funcionarioService.getAll().subscribe(value => {
-      this.funcionarios = value;
-    })
+    this.atualizaLista()
   }
 
   abrirFecharModal(funcionario: Funcionario) {
@@ -27,5 +25,17 @@ export class FuncionarioListComponent {
       this.modal = false;
       this.funcionario = undefined
     }
+  }
+
+  atualizaLista() {
+    this.funcionarioService.getAllByRestauranteId(Number(window.localStorage.getItem("restauranteId"))).subscribe(value => {
+      this.funcionarios = value;
+    })
+  }
+
+  deletarFuncionario(funcionarioId: number) {
+    this.funcionarioService.deleteById(funcionarioId).subscribe(value => {
+      this.atualizaLista()
+    })
   }
 }

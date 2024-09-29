@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { FuncionarioService } from '../services/funcionario.service';
+import { SexoEnum } from '../model/sexo';
+import { CargoEnum } from '../model/cargo';
+import { Funcionario } from '../model/funcionario';
 
 @Component({
   selector: 'app-cadastro',
@@ -20,7 +23,15 @@ export class CadastroComponent {
     this.montarFormulario()
 
     this.activetedRoute.params.subscribe(params => {
-      //TODO
+      if(params['funcionarioId']){
+        this.funcionarioService.getById(params['funcionarioId']).subscribe(value => {
+          this.atualizar = !this.atualizar
+          value.sexo = Object.values(SexoEnum).indexOf(value.sexo)
+          value.cargo = Object.values(CargoEnum).indexOf(value.cargo)
+          this.formulario.patchValue(value);
+          this.titulo = "Atualizar Funcionário"
+        })
+      }
     })
   }
 
@@ -31,11 +42,11 @@ export class CadastroComponent {
       sobrenome: [undefined, (Validators.required, this.validaNome.bind(this))],
       cpf: [undefined, (Validators.required, this.validaCpf.bind(this))],
       dataNascimento: [undefined, (Validators.required, this.validaDataNascimento.bind(this))],
-      sexo: [undefined, Validators.required],
-      telefone: [undefined, Validators.required],
-      cargo: [undefined, Validators.required],
-      dataAdmisao: [undefined, Validators.required],
-      salario: [undefined, Validators.required],
+      sexo: [undefined, (Validators.required, this.validaSexo.bind(this))],
+      telefone: [undefined, (Validators.required, this.validaTelefone.bind(this))],
+      cargo: [undefined, (Validators.required, this.validaCargo.bind(this))],
+      dataAdmisao: [new Date().toISOString().split('T')[0], Validators.required],
+      salario: [undefined, (Validators.required, this.validaSalario.bind(this))],
       cargaHoraria: [undefined, Validators.required],
       restaurante: [{ id: window.localStorage.getItem("restauranteId") }]
     })
@@ -49,7 +60,7 @@ export class CadastroComponent {
   }
 
   validaNome(campo: AbstractControl) {
-    if (campo.value == "" || campo.value == null || campo.value.length < 4) {
+    if (campo.value == "" || campo.value == null || campo.value.length < 4 || campo.value.length > 60) {
       return { nomeInvalido: true };
     }
     return null;
@@ -64,9 +75,9 @@ export class CadastroComponent {
 
   validaDataNascimento(campo: AbstractControl) {
     const hoje = new Date();
-    const valorCampo = campo.value
+    const valorCampo: Date = new Date(Date.parse(campo.value));
 
-    if (valorCampo == undefined || valorCampo == null) {
+    if (campo.value === null || valorCampo === undefined || valorCampo === null) {
       return { dataDeNascimentoInvalida: true };
     }
 
@@ -84,8 +95,45 @@ export class CadastroComponent {
     return null;
   }
 
+  validaSexo(campo: AbstractControl) {
+    if (campo.value === "" || campo.value === null) {
+      return { sexoInvalido: true };
+    }
+    return null;
+  }
+
+  validaTelefone(campo: AbstractControl) {
+    if (campo.value === "" || campo.value === null || campo.value.length < 11 || campo.value.length > 13) {
+      return { telefoneInvalido: true };
+    }
+    return null;
+  }
+
+  validaCargo(campo: AbstractControl) {
+    if (campo.value === "" || campo.value === null) {
+      return { cargoInvalido: true };
+    }
+    return null;
+  }
+
+  validaSalario(campo: AbstractControl) {
+    if(this.formulario){
+      if (
+        this.formulario.get('cargo')?.value === null ||
+        (this.formulario.get('cargo')?.value === "3" && campo.value > 1412.00) ||
+        (this.formulario.get('cargo')?.value != "3" && campo.value <= 1412.00)) {
+        return { salarioInvalido: true }
+      }
+    }
+    return null
+  }
+
   cadastrar() {
-    console.log("CADASTRAR");
-    console.log(this.formulario.getRawValue());
+    const funcionario: Funcionario = this.formulario.getRawValue()
+    if(funcionario.id){
+      this.funcionarioService.updateFuncionario(funcionario).subscribe(valor => {})
+    }else{
+      this.funcionarioService.createFuncionario(funcionario).subscribe(valor => {})
+    }
   }
 }
