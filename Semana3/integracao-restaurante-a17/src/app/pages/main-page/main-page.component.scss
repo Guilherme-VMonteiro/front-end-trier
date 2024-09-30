@@ -10,7 +10,7 @@ main{
 
 aside{
   display: grid;
-  grid-template-rows: 70px 1fr;
+  grid-template-rows: 100px 1fr;
 
   border-right: 2px solid $off-white-2;
 }
@@ -28,7 +28,7 @@ header{
   flex-direction: column;
   gap: 20px;
 
-  padding-top: 20px;
+  padding: 20px 0px;
 
   box-sizing: border-box;
 }

@@ -1,0 +1,27 @@
+<div class="container" >
+  <header>
+    <h2>Bem vindo de volta!</h2>
+    <p>Por favor, entre com as suas credenciais.</p>
+  </header>
+
+  <form [formGroup]="formulario" (submit)="entrar()">
+    <div class="input-container">
+      <div class="input-group">
+        <label for="email">E-mail</label>
+        <input type="email" name="email" formControlName="email" placeholder="Seu E-mail"
+          [ngClass]="{'erro': formulario.get('email')?.touched && formulario.get('email')?.hasError('required')}">
+      </div>
+
+      <div class="input-group">
+        <label for="senha">Senha</label>
+        <input type="password" name="senha" formControlName="senha"
+          placeholder="Sua senha"
+          [ngClass]="{'erro': formulario.get('senha')?.touched && (formulario.get('senha')?.hasError('required') || formulario.get('senha')?.hasError('senhaInvalida'))}">
+      </div>
+    </div>
+
+    <div class="submit-container">
+      <input type="submit" value="Entrar" [disabled]="!formulario.valid">
+    </div>
+  </form>
+</div>

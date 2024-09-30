@@ -8,6 +8,10 @@ const routes: Routes = [
     component: MainPageComponent,
     children: [
       {
+        path: "login",
+        loadChildren: () => import("../features/login/login.module").then((modulo) => modulo.LoginModule)
+      },
+      {
         path: "mesa",
         loadChildren: () => import("../features/mesa/mesa.module").then((modulo) => modulo.MesaModule)
       },
@@ -23,6 +27,7 @@ const routes: Routes = [
         path: "cliente",
         loadChildren: () => import("../features/cliente/cliente.module").then((modulo) => modulo.ClienteModule)
       },
+
     ]
   }
 ];

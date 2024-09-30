@@ -4,24 +4,22 @@
       <h1 routerLink="">My Restaurant System</h1>
     </header>
     <ul class="menu-list">
-      <li>
-        <a routerLink="mesa" routerLinkActive="selected"><i class="fa-solid fa-chair"></i>Mesas</a>
+      <li *ngFor="let botao of botoes">
+        <a *ngIf="isLogged;else opcoes_sem_link" [routerLink]="botao.link" routerLinkActive="selected"><i class="fa-solid" [ngClass]="botao.icone"></i>{{botao.nomeBotao}}</a>
+        <ng-template #opcoes_sem_link>
+          <a routerLink="login"><i class="fa-solid" [ngClass]="botao.icone"></i>{{botao.nomeBotao}}</a>
+        </ng-template>
       </li>
-      <li>
-        <a routerLink="cliente" routerLinkActive="selected"><i class="fa-solid fa-users"></i>Clientes</a>
-      </li>
-      <li>
-        <a routerLink="reserva" routerLinkActive="selected"><i class="fa-solid fa-clipboard-list"></i>Reservas</a>
-      </li>
-      <li>
-        <a routerLink="pedido" routerLinkActive="selected"><i class="fa-solid fa-clipboard"></i>Pedidos</a>
-      </li>
-      <li>
-        <a routerLink="funcionario" routerLinkActive="selected"><i class="fa-solid fa-users-gear"></i>Funcionarios</a>
-      </li>
-      <li>
+    </ul>
+    <ul class="menu-list">
+      <li *ngIf="isLogged;else logar_button">
         <a routerLink="restaurante" routerLinkActive="selected"><i class="fa-solid fa-utensils"></i>Restaurante</a>
       </li>
+      <ng-template #logar_button>
+        <li>
+          <a routerLink="login" routerLinkActive="selected"><i class="fa-solid fa-utensils"></i>Entrar</a>
+        </li>
+      </ng-template>
     </ul>
   </aside>
   <section>
